@@ -1,0 +1,81 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 13%;
+    z-index: 100;
+}
+
+.header.active {
+    background: rgba(0, 0, 0, 0.075);
+}
+
+.header .icon {
+    display: none;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+}
+
+header .logo a {
+    color: white;
+}
+
+header .logo img {
+    filter: brightness(200%) contrast(120%);
+    width: 3rem;
+}
+
+header .navbar a {
+    margin-left: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    position: relative;
+}
+
+header .navbar a::after {
+    content: '';
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    translate: -50% -50%;
+    height: 3%;
+    width: 0;
+    opacity: 0;
+    border-radius: 5rem;
+    margin-top: 1rem;
+    background-attachment: fixed;
+    background: var(--gradient);
+    transition: 0.15s linear;
+}
+
+.header .navbar a:hover:after {
+    width: 100%;
+    opacity: 1;
+}
+
+.header .navbar.show {
+    top: 50%;
+    transform: translateY(0);
+}
+
+.menu.rotate {
+    transform: rotate(90deg);
+}
+
+@media (max-width:768px) {
+    .header .icon {
+        display: block;
+        height: 17px;
+        filter: invert(0.2);
+    }
+}

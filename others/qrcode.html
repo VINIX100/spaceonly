@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lightyear</title>
+  <link rel="stylesheet" href="header.css" />
+  <link rel="stylesheet" href="qrcode.css" />
+  <script src="qrcode.js" defer></script>
+  <script src="heaader.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+    integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="">LightyearQR</a>
+    </div>
+
+    <nav class="navbar">
+      <a href="sparkle.html">Home</a>
+      <!---       <a href="">Tools</a>
+        <a href="">Blogs</a>-->
+    </nav>
+  </header>
+
+  <section class="codehome">
+    <div class="input-section">
+      <div class="text">
+        <h1>QRCode Generator</h1>
+        <p>
+          QRCode allows smartphone users to access your websitte or social
+          media handles simply and quickly
+        </p>
+        <p>
+          Enter your URL below to generate a QR Code and download the image.
+        </p>
+      </div>
+      <form class="form" id="form">
+        <input class="url" id="url" type="url" placeholder="Enter a URL" />
+        <select id="size">
+          <option value="100">100✕100</option>
+          <option value="200">200✕200</option>
+          <option value="300" selected>300✕300</option>
+          <option value="400">400✕400</option>
+          <option value="500">500✕500</option>
+          <option value="600">600✕600</option>
+          <option value="700">700✕700</option>
+        </select>
+        <button class="btn" type="submit">Gnerate QRCode</button>
+      </form>
+    </div>
+    <div id="generated" class="code-section">
+      <!--spinner-->
+      <img src="Ripple@1x-1.0s-200px-200px (1).svg" alt="" class="spinner" id="spinner" />
+      <!---------QR code---------->
+      <div id="qrcode"></div>
+    </div>
+  </section>
+</body>
+
+</html>

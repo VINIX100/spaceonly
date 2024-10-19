@@ -1,0 +1,241 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kumbh Sans', sans-serif;
+    text-decoration: none;
+    color: white;
+    transition: 0.5s;
+}
+
+html {
+    scroll-padding-top: 7.5rem;
+}
+
+:root {
+    --gradient: linear-gradient(90deg, #fc00ff 0%, #00dbde 100%);
+    --new-gradient: conic-gradient(transparent 20%, #b511b8, #00dbde);
+}
+
+body {
+    background: #290f2c;
+}
+
+.codehome {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 12%;
+    justify-content: center;
+    align-items: center;
+}
+
+.codehome .text {
+    display: flex;
+    flex-direction: column;
+}
+
+.codehome .text h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #b511b8;
+}
+
+.text p {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.form .url {
+    margin-bottom: 2rem;
+}
+
+.form .url:hover::placeholder {
+    transform: translateY(3rem);
+}
+
+.form .url::placeholder {
+    color: white;
+    transition: 0.7s;
+}
+
+.form .url, .form #size {
+    padding: 1rem;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid rgb(255, 255, 255);
+    border-top-left-radius: 0.4rem;
+    border-top-right-radius: 0.4rem;
+    background: rgba(128, 128, 128, 0.116);
+}
+
+.form #size option {
+    background: rgba(128, 128, 128, 0.192);
+    border-radius: 0;
+    color: black;
+}
+
+.btn {
+    padding: 1rem;
+    background: #b511b8;
+    border: none;
+    border-radius: 0.3rem;
+    margin-top: 1.5rem;
+}
+
+.code-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    transition: 1s;
+}
+
+.code-section img {
+    width: 50%;
+}
+
+.code-section .spinner {
+    display: none;
+    height: 25%;
+}
+
+#qrcode {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#save-link {
+    padding: 1rem;
+    background: #00dbde;
+    color: black;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+}
+
+#save-link:hover {
+    background: #18081f;
+    color: #00dbde;
+}
+
+@media (max-width:768px) {
+
+    .codehome {
+        grid-template-columns: 1fr;
+        padding: 12% 15%;
+    }
+
+    .code-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 4rem;
+    }
+
+    .text {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .input-section, .form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .url::placeholder {
+        text-align: center;
+    }
+
+    .header .navbar {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        top: 100%;
+        left: 0;
+        transform: translateY(100rem);
+        height: 100rem;
+        background: rgba(0, 0, 0, 0.582);
+        backdrop-filter: blur(12px);
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    header .navbar a {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width:1024px) {
+
+    .services .box-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width:540px) {
+    .hero {
+        padding: 0 4rem;
+        padding-top: 3rem;
+        grid-template-columns: 1fr;
+        background: url(dark-laptop-white-cordless-keyboard-fdtwdtsmuwgo6x0b.jpg) no-repeat;
+        background-size: cover;
+    }
+
+    .hero .image-bg {
+        display: none;
+    }
+
+    .feature-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .services {
+        margin-top: 1rem;
+    }
+
+    .services .box-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    footer .section {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (max-width:425px) {
+
+    .hero-about {
+        padding: 1rem 0;
+    }
+
+    .services .box-container {
+        display: grid;
+        grid-template-columns: 2fr;
+    }
+}
+
+html::-webkit-scrollbar {
+    width: 0.7rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: #282B2C;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #00dbde;
+    border-radius: 5rem;
+}
