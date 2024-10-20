@@ -31,7 +31,6 @@ header .logo a {
 }
 
 header .logo img {
-    filter: brightness(200%) contrast(120%);
     width: 3rem;
 }
 
@@ -64,7 +63,7 @@ header .navbar a::after {
 }
 
 .header .navbar.show {
-    top: 50%;
+    top: 50px;
     transform: translateY(0);
 }
 
